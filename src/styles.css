@@ -1,3 +1,67 @@
-body {
-    background-color: rebeccapurple;
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body { 
+    background-color: black;
+}
+
+.jacquard-12-regular {
+    font-family: "Jacquard 12", serif;
+    font-weight: 400;
+    font-style: normal;
   }
+  
+
+#header {
+    display: flex;
+    border: 2px solid yellow;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    height: 100%;
+    width: 100vh;
+    border: 2px solid green;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo > h1 {
+    color: white;
+    font-family: "Jacquard 12", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10em;
+}
+
+
+#navigation {
+    display: flex;
+    border: 2px solid red;
+    align-items: center;
+}
+
+#navigation > button {
+    font-family: "Jacquard 12", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 20vh;
+    font-size: 2em;
+    margin: 0vh 5vh 0vh 5vh;
+    background-color: black;
+    border: none;
+    transition: 0.5s;
+    color: white;
+}
+
+#navigation > button:hover {
+    background-color: white;
+    color: black;
+}
+
