@@ -5,9 +5,9 @@
 
 body {
     display: flex; 
-    background-color: black;
     height: 100%;
     flex-direction: column;
+    background-color: #84d4a3;
 }
 
 
@@ -15,17 +15,25 @@ body {
 
 #header {
     display: flex;
+    background-color: #24ad59;
     border: 2px solid yellow;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     height: 20vh;
-    justify-content: center;
+    justify-content: space-around;
 }   
+
+#logo {
+    border: 2px solid red;
+    font-size: 3em;
+    color: white;
+}
 
 #navigation {
     display: flex;
     border: 2px solid red;
     align-items: center;
+    justify-content: center;
 }
 
 #navigation > button {
@@ -33,9 +41,9 @@ body {
     font-weight: 400;
     font-style: normal;
     width: auto;
-    font-size: 2em;
+    font-size: 1.9em;
     margin: 0vh 5vh 0vh 5vh;
-    background-color: black;
+    background: none;
     border: none;
     color: white;
     position: relative;
@@ -60,11 +68,24 @@ body {
     transform: scaleX(1);
 }
 
+#booking {
+    display: flex;
+    border: 2px solid red;
+}
+
+#booking > button {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+}
 
 #content {
     display: flex;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     border: 2px solid blue;
-    height: 100vh;
+    height: 120vh;
     justify-content: center;;
     align-items: center;
 }
@@ -72,11 +93,48 @@ body {
 #content-wrapper {
     height: 100%;
     width: 70%;
-    border: 2px solid green;
+    /*border: 2px solid green; */
+    background-color: #20a855;
+    border-radius: 20px;
+}
 
+#info-wrapper {
+    color: white;
+    margin: 5vh;
+}    
+
+#about {
+    color: white;
+    margin: 5vh;
+}
+
+#message {
+    color: white;
+    margin: 5vh;
+}
+
+#message > h1 {
+    font-size: 3em;
+}
+
+p, h2, h1 {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 3vh;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 130%;
 }
 
 #footer {
+    background-color: #33774d;
     border: 2px solid yellow;
     height: 15vh;
 }
