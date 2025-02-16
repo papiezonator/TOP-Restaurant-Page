@@ -85,7 +85,7 @@ body {
     margin-top: 5vh;
     margin-bottom: 5vh;
     border: 2px solid blue;
-    height: 145vh;
+    height: auto;
     justify-content: center;;
     align-items: center;
 }
@@ -97,6 +97,8 @@ body {
     background-color: #20a855;
     border-radius: 20px;
 }
+
+
 
 #info-wrapper {
     color: white;
@@ -141,6 +143,69 @@ p {
     font-size: 1.5em;
     line-height: 130%;
 }
+
+
+/* menu */
+
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 5vh;
+    font-size: 3em;
+}
+
+#bites, #desserts, #cocktails, #mocktails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#bites > h2 {
+    font-size: 1em;
+}
+
+#desserts > h2 {
+    font-size: 1em;
+}
+
+#cocktails > h2 {
+    font-size: 1em;
+}
+
+#mocktails > h2 {
+    font-size: 1em;
+}
+
+.item { 
+    height: 10vh;
+    width: 60vh;
+    margin: 2vh;    
+    border: 2px solid red;
+}
+
+.item > h3 {
+    font-size: 0.5em;
+}
+
+.item > p {
+    font-size: 0.3em;
+}
+
+.fTxt {
+    font-style: italic;
+}
+
+/* menu */
 
 #footer {
     background-color: #33774d;
