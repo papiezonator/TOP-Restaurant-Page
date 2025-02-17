@@ -1,5 +1,9 @@
 import "./styles.css";
 
+
+
+
+/*
 window.addEventListener("load", () => {
     contentCreator();
 }) 
@@ -68,3 +72,64 @@ homeButton.addEventListener('click', () => {
     
     
 })
+    */
+
+const menuCreator = () => {
+    const content = document.querySelector("#content");
+    const createDiv = document.createElement("div");
+    createDiv.id = "content-wrapper2";
+    content.appendChild(createDiv);
+    for(let i = 0; i <= 6; i++){
+        const contentWrapper = document.querySelector("#content-wrapper2");
+        const createChild = document.createElement("div");
+        const createH1 = document.createElement("h1")
+        const createH2 = document.createElement("h2");
+        const createP = document.createElement("p");
+        const menu = contentWrapper.querySelector("#menu1");
+        switch(i){
+            case 0:
+                contentWrapper.appendChild(createChild);
+                createChild.id = "menu1";
+                break;
+            case 1:
+                menu.appendChild(createH1);
+                createH1.innerHTML = `Menu`;
+                break;
+            case 2:
+                menu.appendChild(createChild);
+                createChild.id = "bites";
+                addItems(createChild, 8, 1);
+                break;
+            case 3:
+                menu.appendChild(createChild);
+                createChild.id = "desserts";
+                addItems(createChild, 4, 1);
+                break;   
+            case 4:
+                menu.appendChild(createChild);
+                createChild.id = "cocktails";
+                addItems(createChild, 4, 1);
+                break;  
+            case 5:
+                menu.appendChild(createChild);
+                createChild.id = "mocktails";
+                addItems(createChild, 4, 1);
+        }
+    }
+}
+
+const addItems = (element, num, child) => {
+    for(let i = 0; i <= num; i++){
+        const createDiv = document.createElement("div");
+        if(i === 0){
+            element.appendChild(createDiv);
+            createDiv.className = "items1"
+        } else {
+        const items = document.querySelectorAll(".items1");
+        items[items.length-child].appendChild(createDiv);
+        //createDiv.className = "item1";
+        }   
+    }
+}
+
+menuCreator();
