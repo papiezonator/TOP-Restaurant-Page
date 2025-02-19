@@ -127,9 +127,68 @@ const addItems = (element, num, child) => {
         } else {
         const items = document.querySelectorAll(".items1");
         items[items.length-child].appendChild(createDiv);
-        //createDiv.className = "item1";
+        createDiv.className = "item1";
         }   
+    }
+    return;
+}
+
+const addText = () => {
+    const menu = document.querySelector("#menu1");
+    const items = document.querySelectorAll(".items1");
+    /*for(let i  = 1; i < 5; i++){
+        console.log(menu.children[i]);
+    }*/
+    
+    const item = document.querySelectorAll(".item1");
+   for(let i = 0; i < items.length; i++){
+        console.log(items[i].parentNode.id);
+        switch(items[i].parentNode.id){
+            case 'bites':
+                addContent(i, items[i])
+                /*for(let j = 0; j < items[i].childElementCount; j++){
+                    const createP = document.createElement("p");
+                    const createH3 = document.createElement("h3");
+                    items[i].childNodes[j].appendChild(createH3);
+                    items[i].childNodes[j].appendChild(createP);
+                    console.log(items[i].childNodes[j], i, j)
+                    
+                }*/
+                console.log(items[i].childNodes);
+                break;
+            case 'desserts':
+                for(let j = 0; j < items[i].childElementCount; j++){
+                    console.log(items[i].childNodes[j]);
+                }
+                console.log(items[i].childNodes);
+                break;
+            case 'cocktails':
+                for(let j = 0; j < items[i].childElementCount; j++){
+                    console.log(items[i].childNodes[j]);
+                }
+                console.log(items[i].childNodes);
+                break;
+            case 'mocktails':
+                for(let j = 0; j < items[i].childElementCount; j++){
+                    console.log(items[i].childNodes[j]);
+                }
+                console.log(items[i].childNodes);
+                break;
+        }
+   }
+   return;
+}
+
+const addContent = (num, parent) => {
+    for(let j = 0; j < parent.childElementCount; j++){
+        const createP = document.createElement("p");
+        const createH3 = document.createElement("h3");
+        parent.childNodes[j].appendChild(createH3);
+        parent.childNodes[j].appendChild(createP);
+        console.log(parent.childNodes[j], num, j)
+        
     }
 }
 
 menuCreator();
+addText();
