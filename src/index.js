@@ -181,10 +181,17 @@ const addText = () => {
 
 const addContent = (num, parent) => {
     for(let j = 0; j < parent.childElementCount; j++){
-        const createP = document.createElement("p");
         const createH3 = document.createElement("h3");
         parent.childNodes[j].appendChild(createH3);
-        parent.childNodes[j].appendChild(createP);
+        for(let x = 0; x < 2; x++){
+            const createP = document.createElement("p");
+            parent.childNodes[j].appendChild(createP);
+            if(x === 1){
+                createP.className = "fTxt";
+            }
+        }
+
+        
         console.log(parent.childNodes[j], num, j)
         
     }
