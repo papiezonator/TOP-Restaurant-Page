@@ -74,6 +74,8 @@ homeButton.addEventListener('click', () => {
 })
     */
 
+
+
 const menuCreator = () => {
     const content = document.querySelector("#content");
     const createDiv = document.createElement("div");
@@ -140,25 +142,12 @@ const addItems = (element, num, child) => {
 const addText = () => {
     const menu = document.querySelector("#menu");
     const items = document.querySelectorAll(".items");
-    /*for(let i  = 1; i < 5; i++){
-        console.log(menu.children[i]);
-    }*/
-    
     const item = document.querySelectorAll(".item");
    for(let i = 0; i < items.length; i++){
         console.log(items[i].parentNode.id);
         switch(items[i].parentNode.id){
             case 'bites':
                 addContent(i, items[i], items[i].parentNode);
-                /*for(let j = 0; j < items[i].childElementCount; j++){
-                    const createP = document.createElement("p");
-                    const createH3 = document.createElement("h3");
-                    items[i].childNodes[j].appendChild(createH3);
-                    items[i].childNodes[j].appendChild(createP);
-                    console.log(items[i].childNodes[j], i, j)
-                    
-                }*/
-               
                 console.log(items[i].childNodes);
                 break;
             case 'desserts':
@@ -203,43 +192,36 @@ const addContent = (num, parent, container) => {
                         parent.childNodes[j].childNodes[1].innerHTML = `A warm flatbread topped with goat cheese, caramelized onions, arugula, and a drizzle of balsamic glaze.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `For when you want a taste of the forest's finest treats.`;
                         break;
-                    case 2:
-                        
+                    case 2:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `Dragon’s Breath Wings`;
                         parent.childNodes[j].childNodes[1].innerHTML = `Spicy, smoky wings served with a cooling honey-mustard dipping sauce.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `For the brave souls who dare to face the heat.`;
                         break;
-                    case 3:
-                        
+                    case 3:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `The Gnome's Cheese Board`;
                         parent.childNodes[j].childNodes[1].innerHTML = `A selection of mystical cheeses served with seasonal fruits, nuts, and a warm, buttery baguette.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `The perfect snack to share with your fellow adventurers.`;
                         break;
-                    case 4:
-                        
+                    case 4:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `Goblin’s Gold Popcorn`;
                         parent.childNodes[j].childNodes[1].innerHTML = `Warm, buttery popcorn sprinkled with sea salt and a touch of parmesan, or try it with a smoky BBQ dust for an extra kick.`
                         parent.childNodes[j].childNodes[2].innerHTML = `A snack that’s easy to share during long games or intense roleplay battles!`
                         break;    
-                    case 5:
-                        
+                    case 5:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `Witches’ Brew Queso Dip`;
                         parent.childNodes[j].childNodes[1].innerHTML = `A creamy, spicy cheese dip served with tortilla chips or warm, soft breadsticks.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `Perfect for stirring up some friendly competition during a heated game night.`;
                         break;
-                    case 6:
-                        
+                    case 6:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `Pixie Puffs`;
                         parent.childNodes[j].childNodes[1].innerHTML = `Mini savory puff pastry bites filled with creamy spinach and cheese, lightly toasted to golden perfection.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `Little puffs of magic to keep your hands free for dice rolls!`
                         break;
-                    case 7:
-                        
+                    case 7:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `Fairy Garden Flatbreads`;
                         parent.childNodes[j].childNodes[1].innerHTML = `Thin, crispy flatbreads topped with hummus, roasted red pepper, and a sprinkling of feta and olives.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `Perfect for sharing with fellow adventurers between quests.`;
-                        break;
-                    
+                        break;                    
                 }
                 break;
             case "desserts":
@@ -247,28 +229,24 @@ const addContent = (num, parent, container) => {
                     case 0:
                         container.childNodes[0].innerHTML = `Mystical Desserts`;
                         parent.childNodes[j].childNodes[0].innerHTML = `The Moonlit Forest Tart`;
-                        parent.childNodes[j].childNodes[1].innerHTML = `A delicate, buttery tart filled with a smooth lemon-lavender custard and topped with a forest of fresh berries, mint leaves, and a sprinkle of edible glitter.`;
-                        parent.childNodes[j].childNodes[2].innerHTML = `As dreamy and mystical as a midnight stroll through an enchanted forest under a full moon.`;
+                        parent.childNodes[j].childNodes[1].innerHTML = `A delicate, buttery tart filled with a smooth lemon-lavender custard topped with fresh berries, mint leaves, and a sprinkle of edible glitter.`;
+                        parent.childNodes[j].childNodes[2].innerHTML = `As dreamy and mystical as a midnight stroll through an enchanted forest.`;
                         break;
-                    case 1:
-                        
+                    case 1:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `Fairy Dust Cupcakes`;
                         parent.childNodes[j].childNodes[1].innerHTML = `Light and fluffy cupcakes with a hint of lavender, topped with a sugary swirl of glittery frosting.;`
                         parent.childNodes[j].childNodes[2].innerHTML = `A sweet treat that’s just a little bit magical.`;
                         break;
-                    case 2:
-                        
+                    case 2:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `The Moonlit Panna Cotta`;
                         parent.childNodes[j].childNodes[1].innerHTML = `Velvety panna cotta infused with vanilla and a hint of wildflower honey, served with a berry compote.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `A dessert fit for a fae queen.`;
                         break;
-                    case 3:
-                        
+                    case 3:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `Frog Prince's Caramel Brownies`;
                         parent.childNodes[j].childNodes[1].innerHTML = `Decadent, fudgy brownies with a swirl of rich caramel, served warm with a dusting of powdered sugar.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `An irresistible treat that’ll turn anyone into a prince.`;
-                        break;
-                    
+                        break;                    
                 }
                 break;
             case "cocktails":
@@ -279,25 +257,21 @@ const addContent = (num, parent, container) => {
                         parent.childNodes[j].childNodes[1].innerHTML = `A sweet, citrusy potion with a twist of mint and a splash of sparkling water. Served in a frosty glass with a slice of lime.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `Perfect for a refreshing hop in the pond!`
                         break;
-                    case 1:
-                        
+                    case 1:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `The Croak & Tonic`;
                         parent.childNodes[j].childNodes[1].innerHTML = `Gin, elderflower liqueur, and tonic water, garnished with a sprig of rosemary and a lemon wedge.`;
-                        parent.childNodes[j].childNodes[2].innerHTML = `A crisp and magical blend for those seeking a peaceful evening by the lily pads.`;
+                        parent.childNodes[j].childNodes[2].innerHTML = `A crisp and magical blend for those seeking a peaceful evening.`;
                         break;
-                    case 2:
-                        
+                    case 2:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `Enchanted Frog Fizz`;
                         parent.childNodes[j].childNodes[1].innerHTML = `A playful mix of vodka, blue curacao, and lemonade, topped with a frothy egg white finish. A mesmerizing blue drink, just like the magic of the forest.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `Don’t let this one slip away!`;
                         break;
-                    case 3:
-                        
+                    case 3:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `The Warty Wizard`;
                         parent.childNodes[j].childNodes[1].innerHTML = `A dark, smoky whiskey concoction with hints of honey, ginger, and a dash of bitters.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `A drink for those who like their potions strong and their spells potent.`;
-                        break;
-                    
+                        break;                    
                 }
                     break;
                 case "mocktails":
@@ -309,19 +283,16 @@ const addContent = (num, parent, container) => {
                         parent.childNodes[j].childNodes[2].innerHTML = `Fresh from the enchanted garden—crisp, cool, and oh-so-refreshing.`;
                         break;
                     case 1:
-                        
                         parent.childNodes[j].childNodes[0].innerHTML = `The Toadstool Twist`;
                         parent.childNodes[j].childNodes[1].innerHTML = `A fruity blend of apple, cranberry, and a touch of cinnamon. Served chilled and garnished with a cinnamon stick.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `For when you want to experience the magic without the buzz.`;
                         break;
-                    case 2:
-                        
+                    case 2:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `The Swamp Sprite`;
                         parent.childNodes[j].childNodes[1].innerHTML = `A zesty blend of lime juice, cucumber, and a touch of honey, topped with soda water and garnished with a fresh basil leaf.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `Light, refreshing, and as playful as a froggy leap into a sparkling swamp!`;
                         break;
-                    case 3:
-                        
+                    case 3:                        
                         parent.childNodes[j].childNodes[0].innerHTML = `The Pixie’s Nectar`;
                         parent.childNodes[j].childNodes[1].innerHTML = `A blend of passion fruit, pineapple, and orange juice with a hint of grenadine, served over crushed ice and topped with a colorful edible flower.`;
                         parent.childNodes[j].childNodes[2].innerHTML = `Sweet, tropical, and as magical as a pixie’s enchanted wings.`;
@@ -330,10 +301,8 @@ const addContent = (num, parent, container) => {
                 }
                     break;            
         }
-        
-        console.log(parent.childNodes[j], num, j, container);
-        
     }
+    return
 }
 
 
