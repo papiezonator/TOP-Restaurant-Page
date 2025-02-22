@@ -327,6 +327,7 @@ const createContact = () => {
                 contentWrapper.appendChild(createDiv);
                 createDiv.id = "contact1";
                 createWrappers();
+                addPara();
     
         }
     }
@@ -348,8 +349,22 @@ const createWrappers = () => {
     return
 }
 
-const addClass = () => {
-    
+const addPara = () => {
+    const parent = document.querySelector("#contact1");
+    for(let i = 0; i < parent.childElementCount; i++){
+        let child = parent.childNodes[i]
+        for(let j = 0; j < 4; j++){
+            if(i === 0){
+                const createH1 = document.createElement("h1");
+                child.appendChild(createH1);
+                break;
+            } else {
+                const createP = document.createElement("p");
+                child.appendChild(createP);
+            }
+        }
+        //console.log(parent.childNodes[i]);
+    }
 }
 
 
