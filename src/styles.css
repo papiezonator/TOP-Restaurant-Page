@@ -235,7 +235,7 @@ p {
     margin: 5vh;    
 }
 
-.name, .employee, .number, .email {
+.name, .role, .number, .email {
     font-size: 1.6em;
 }
 
