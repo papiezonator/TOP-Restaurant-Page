@@ -328,6 +328,7 @@ const createContact = () => {
                 createDiv.id = "contact1";
                 createWrappers();
                 addPara();
+                addText();
     
         }
     }
@@ -364,21 +365,51 @@ const addPara = () => {
                 child.appendChild(createP);
                 switch(j){
                     case 0:
-                        createP.className = "name";
+                        createP.className = "name1";
                         break;
                     case 1:
-                        createP.className = "role";
+                        createP.className = "role1";
                         break;
                     case 2:
-                        createP.className = "number";
+                        createP.className = "number1";
                         break;
                     case 3:
-                        createP.className = "email";
+                        createP.className = "email1";
                         break;
                 }
             }
         }
         //console.log(parent.childNodes[i]);
+    }
+    return;
+}
+
+const addText = () => {
+    let user = function(name, surname, role, number, email) {
+        this.name = name;
+        this.surname = surname;
+        this.role = role;
+        this.number = number;
+        this.email = email;
+    } 
+    const createUser = (name, surname, role, number, email) => {
+        return {name, surname, role, number, email}
+    }
+    for(let i = 0; i < 3; i++){
+        switch(i){
+            case 0:           
+                const user1 = createUser("John", "Doe", "Manager", "123-123-121", "johndoe@froggybar.com");
+                console.log(user1);
+                break;
+            case 1:
+                const user2 = createUser("Jane", "Doe", "Chef", "123-123-122", "janedoe@froggybar.com");
+                console.log(user2);
+                break;
+            case 2:
+                const user3 = createUser("Johannes", "Doe", "Waiter", "123-123-123", "johannesdoe@froggybar.com");
+                console.log(user3);
+                break;
+        }   
     }
     return;
 }
