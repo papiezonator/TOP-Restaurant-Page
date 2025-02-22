@@ -357,14 +357,30 @@ const addPara = () => {
             if(i === 0){
                 const createH1 = document.createElement("h1");
                 child.appendChild(createH1);
+                
                 break;
             } else {
                 const createP = document.createElement("p");
                 child.appendChild(createP);
+                switch(j){
+                    case 0:
+                        createP.className = "name";
+                        break;
+                    case 1:
+                        createP.className = "role";
+                        break;
+                    case 2:
+                        createP.className = "number";
+                        break;
+                    case 3:
+                        createP.className = "email";
+                        break;
+                }
             }
         }
         //console.log(parent.childNodes[i]);
     }
+    return;
 }
 
 
