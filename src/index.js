@@ -3,7 +3,7 @@ import "./styles.css";
 
 
 
-/*
+/* HOME PAGE
 window.addEventListener("load", () => {
     contentCreator();
 }) 
@@ -75,7 +75,7 @@ homeButton.addEventListener('click', () => {
     */
 
 
-
+/* MENU SECTION
 const menuCreator = () => {
     const content = document.querySelector("#content");
     const createDiv = document.createElement("div");
@@ -308,3 +308,50 @@ const addContent = (num, parent, container) => {
 
 menuCreator();
 addText();
+*/
+
+
+/* CONTACT SECTION */
+
+const createContact = () => {
+    const content = document.querySelector("#content");
+    for(let i = 0; i < 2; i++){
+        const createDiv = document.createElement("div");
+        switch(i){
+            case 0:
+                content.appendChild(createDiv);
+                createDiv.id = "content-wrapper1";
+                break;
+            case 1:
+                const contentWrapper = document.querySelector("#content-wrapper1");
+                contentWrapper.appendChild(createDiv);
+                createDiv.id = "contact1";
+                createWrappers();
+    
+        }
+    }
+    return;
+}
+
+const createWrappers = () => {
+    const contact = document.querySelector("#contact1");
+    for(let j = 0; j < 4; j++){
+        const div = document.createElement("div");
+        contact.appendChild(div);
+        if(j === 0){
+            div.className = "contact-header1";
+        }
+        else {
+            div.className = "contact1";
+        }
+    }
+    return
+}
+
+const addClass = () => {
+    
+}
+
+
+
+createContact()
