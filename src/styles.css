@@ -122,6 +122,7 @@ body {
 
 #message > h1 {
     margin-top: 15vh;
+    margin-bottom: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
