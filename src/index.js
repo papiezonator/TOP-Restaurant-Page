@@ -328,7 +328,7 @@ const createContact = () => {
                 createDiv.id = "contact1";
                 createWrappers();
                 addPara();
-                addText();
+                createInfo();
     
         }
     }
@@ -384,14 +384,7 @@ const addPara = () => {
     return;
 }
 
-const addText = () => {
-    let user = function(name, surname, role, number, email) {
-        this.name = name;
-        this.surname = surname;
-        this.role = role;
-        this.number = number;
-        this.email = email;
-    } 
+const createInfo = () => { 
     const createUser = (name, surname, role, number, email) => {
         return {name, surname, role, number, email}
     }
@@ -415,5 +408,8 @@ const addText = () => {
 }
 
 
+
+//function that takes swtich(i) value and passes it to anothe rfunction as an argument and the user as an argument as well
+//then it adds the content to childNodes[i] with createUser.name etc as innerHTML to respective divs
 
 createContact()
