@@ -1,3 +1,5 @@
+export { menuCreator }
+
 const menuCreator = () => {
     const content = document.querySelector("#content");
     const createDiv = document.createElement("div");
@@ -227,7 +229,4 @@ const addContent = (num, parent, container) => {
     }
     return
 }
-
-
-menuCreator();
 
