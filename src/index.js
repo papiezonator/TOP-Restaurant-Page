@@ -320,12 +320,12 @@ const createContact = () => {
         switch(i){
             case 0:
                 content.appendChild(createDiv);
-                createDiv.id = "content-wrapper1";
+                createDiv.id = "content-wrapper";
                 break;
             case 1:
-                const contentWrapper = document.querySelector("#content-wrapper1");
+                const contentWrapper = document.querySelector("#content-wrapper");
                 contentWrapper.appendChild(createDiv);
-                createDiv.id = "contact1";
+                createDiv.id = "contact";
                 createWrappers();
                 addPara();
                 createInfo();
@@ -336,22 +336,22 @@ const createContact = () => {
 }
 
 const createWrappers = () => {
-    const contact = document.querySelector("#contact1");
+    const contact = document.querySelector("#contact");
     for(let j = 0; j < 4; j++){
         const div = document.createElement("div");
         contact.appendChild(div);
         if(j === 0){
-            div.className = "contact-header1";
+            div.id = "contact-header";
         }
         else {
-            div.className = "contact1";
+            div.className = "contact";
         }
     }
     return
 }
 
 const addPara = () => {
-    const parent = document.querySelector("#contact1");
+    const parent = document.querySelector("#contact");
     for(let i = 0; i < parent.childElementCount; i++){
         let child = parent.childNodes[i]
         for(let j = 0; j < 4; j++){
@@ -365,16 +365,16 @@ const addPara = () => {
                 child.appendChild(createP);
                 switch(j){
                     case 0:
-                        createP.className = "name1";
+                        createP.className = "name";
                         break;
                     case 1:
-                        createP.className = "role1";
+                        createP.className = "role";
                         break;
                     case 2:
-                        createP.className = "number1";
+                        createP.className = "number";
                         break;
                     case 3:
-                        createP.className = "email1";
+                        createP.className = "email";
                         break;
                 }
             }
@@ -407,13 +407,8 @@ const createInfo = () => {
     return;
 }
 
-
-
-//function that takes swtich(i) value and passes it to anothe rfunction as an argument and the user as an argument as well
-//then it adds the content to childNodes[i] with createUser.name etc as innerHTML to respective divs
-
 const addText = (num, user) => {
-    const contactSection = document.querySelectorAll(".contact1");
+    const contactSection = document.querySelectorAll(".contact");
     console.log(contactSection[num], user.name);
     for(let i = 0; i < contactSection[num].childElementCount; i++){
         switch(i){
