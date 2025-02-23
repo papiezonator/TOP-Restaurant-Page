@@ -358,7 +358,7 @@ const addPara = () => {
             if(i === 0){
                 const createH1 = document.createElement("h1");
                 child.appendChild(createH1);
-                
+                createH1.innerHTML = "Contact us";
                 break;
             } else {
                 const createP = document.createElement("p");
