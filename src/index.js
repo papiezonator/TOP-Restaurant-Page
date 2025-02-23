@@ -392,15 +392,15 @@ const createInfo = () => {
         switch(i){
             case 0:           
                 const user1 = createUser("John", "Doe", "Manager", "123-123-121", "johndoe@froggybar.com");
-                console.log(user1);
+                addText(i, user1);
                 break;
             case 1:
                 const user2 = createUser("Jane", "Doe", "Chef", "123-123-122", "janedoe@froggybar.com");
-                console.log(user2);
+                addText(i, user2);
                 break;
             case 2:
                 const user3 = createUser("Johannes", "Doe", "Waiter", "123-123-123", "johannesdoe@froggybar.com");
-                console.log(user3);
+                addText(i, user3);
                 break;
         }   
     }
@@ -411,5 +411,27 @@ const createInfo = () => {
 
 //function that takes swtich(i) value and passes it to anothe rfunction as an argument and the user as an argument as well
 //then it adds the content to childNodes[i] with createUser.name etc as innerHTML to respective divs
+
+const addText = (num, user) => {
+    const contactSection = document.querySelectorAll(".contact1");
+    console.log(contactSection[num], user.name);
+    for(let i = 0; i < contactSection[num].childElementCount; i++){
+        switch(i){
+            case 0:
+                contactSection[num].childNodes[i].innerHTML = `${user.name} ${user.surname}`;
+                break;
+            case 1:
+                contactSection[num].childNodes[i].innerHTML = `${user.role}`;
+                break;
+            case 2:
+                contactSection[num].childNodes[i].innerHTML = `${user.number}`;
+                break;
+            case 3:
+                contactSection[num].childNodes[i].innerHTML = `${user.email}`;
+                break;
+        }
+    }
+    return;
+}
 
 createContact()
