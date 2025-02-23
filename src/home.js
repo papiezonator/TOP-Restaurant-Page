@@ -1,9 +1,3 @@
-/*window.addEventListener("load", () => {
-    contentCreator();
-}) */
-
-//const homeButton = document.querySelector("#homeButton");
-
 export {contentCreator};
 
 const contentCreator = () => {
@@ -61,9 +55,3 @@ const contentCreator = () => {
     }
     return;
 }
-
-/*homeButton.addEventListener('click', () => {
-    contentCreator();
-    
-    
-})*/
